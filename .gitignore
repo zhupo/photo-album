@@ -8,3 +8,6 @@
 /common/config
 /frontend/config
 /backend/config
+
+# phpstorm project files
+.idea
