@@ -1,0 +1,10 @@
+# composer vendor dir
+/vendor
+
+# node modules dir
+/node_modules
+
+# config dir
+/common/config
+/frontend/config
+/backend/config
