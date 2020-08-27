@@ -17,7 +17,7 @@ abstract class BaseController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'roles' => ['@']
+//                        'roles' => ['@'] //?允许游客访问 @游客不允许访问
                     ]
                 ]
             ],

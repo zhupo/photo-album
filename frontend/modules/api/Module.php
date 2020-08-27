@@ -34,7 +34,21 @@ class Module extends \yii\base\Module implements BootstrapInterface
 
                     'GET {id}/<action:[\w\-]+>' => '<action>',
                     'PUT {id}/<action:[\w\-]+>' => '<action>',
-                    'POST {id}/<action:[\w\-]+>' => '<action>',
+                    'PATCH {id}/<action:[\w\-]+>' => '<action>',
+                    'POST <action:[\w\-]+>' => '<action>',
+                ]
+            ],
+            [
+                'class' => UrlRule::class,
+                'controller' => [
+                    "$uniqueId/image",
+                ],
+                'extraPatterns' => [
+                    'DELETE {id}/<action:[\w\-]+>' => '<action>',
+
+                    'GET {id}/<action:[\w\-]+>' => '<action>',
+                    'PUT {id}/<action:[\w\-]+>' => '<action>',
+                    'PATCH {id}/<action:[\w\-]+>' => '<action>',
                     'POST <action:[\w\-]+>' => '<action>',
                 ]
             ],
