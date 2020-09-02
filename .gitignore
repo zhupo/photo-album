@@ -8,7 +8,9 @@
 /node_modules
 
 # config dir
-/common/config
-/frontend/config
-/backend/config
+/common/config/db.php
+/common/config/db_migration.php
+# /common/config
+# /frontend/config
+# /backend/config
 
