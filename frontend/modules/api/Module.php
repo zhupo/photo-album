@@ -50,6 +50,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
                     'PUT {id}/<action:[\w\-]+>' => '<action>',
                     'PATCH {id}/<action:[\w\-]+>' => '<action>',
                     'POST <action:[\w\-]+>' => '<action>',
+                    'GET <action:[\w\-]+>' => '<action>',
                 ]
             ],
         ]);
