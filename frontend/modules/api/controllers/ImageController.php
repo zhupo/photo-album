@@ -37,7 +37,7 @@ class ImageController extends BaseController
                 [
                     'url' => 'http://m.qpic.cn/psc?/V50AYnUV3WqjyS2vXqPa0J2GSy2XfUEO/ruAMsa53pVQWN7FLK88i5pmTwzj413gs83p6lzrD68p8NLbRYiEmh9qD6KiGMpedvSmA4H.WJhs78aXFtcQzj8rNgGAwjgVJomeGcRIPAPA!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5',
                     'title' => '图文分享',
-                    'router' => ['name' => 'news.list']
+                    'router' => ['name' => 'photo.list', 'params' => ['categoryId' => 0]]
                 ],
                 [
                     'url' => 'http://m.qpic.cn/psc?/V50AYnUV3WqjyS2vXqPa0J2GSy2XfUEO/ruAMsa53pVQWN7FLK88i5n.Vlk09CSB.TRUmtvULrj1VvsECDwA.4I0JSAJ1u1lRZci6LBeQHShnUcdO9S7ACtXKByU0PhPONqMGLiyL3fA!/mnull&bo=3gDIAAAAAAADBzQ!&rf=photolist&t=5',
