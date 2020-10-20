@@ -22,4 +22,3 @@ class User extends Entity
         return password_verify($password, $this->password);
     }
 }
-
