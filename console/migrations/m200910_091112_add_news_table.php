@@ -8,7 +8,7 @@ class m200910_091112_add_news_table extends Migration
     {
         $this->createTable('{{%news}}', [
             'id' => $this->primaryKey(10)->unsigned()->notNull(),
-            'url' => $this->string(255)->notNull(),
+            'url' => $this->text()->notNull(),
             'title' => $this->string(50)->notNull(),
             'summary' => $this->string(64)->notNull(),
             'content' => $this->text()->notNull(),

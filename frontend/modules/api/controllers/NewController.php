@@ -2,9 +2,15 @@
 
 namespace frontend\modules\api\controllers;
 
+use common\domain\entity\News;
 use frontend\modules\api\services\NewsService;
 use Yii;
 
+/**
+ * Class NewController
+ *
+ * @package frontend\modules\api\controllers
+ */
 class NewController extends BaseController
 {
     /**
@@ -26,6 +32,10 @@ class NewController extends BaseController
         return $this->newService->getNewList();
     }
 
+    /**
+     * @param $id
+     * @return News|null
+     */
     public function actionView($id)
     {
         return $this->newService->getNewById($id);
