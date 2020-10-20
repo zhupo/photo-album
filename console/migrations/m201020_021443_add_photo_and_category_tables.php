@@ -33,8 +33,8 @@ class m201020_021443_add_photo_and_category_tables extends Migration
             'msrc' => $this->text()->notNull(),
             'alt' => $this->string(32)->notNull(),
             'title' => $this->string(64)->notNull(),
-            'width' => $this->integer(10)->notNull(),
-            'height' => $this->integer(10)->notNull(),
+            'w' => $this->integer(10)->notNull(),
+            'h' => $this->integer(10)->notNull(),
             'createdAt' => $this->integer(10)->unsigned()->notNull(),
             'updatedAt' => $this->integer(10)->unsigned()->notNull(),
         ], $this->tableOptions);

@@ -1683,3 +1683,779 @@ $_SERVER = [
     ]
     'argc' => 2
 ]
+2020-10-20 13:37:52 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'root', '19961024@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:37:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201072.7408
+    'REQUEST_TIME' => 1603201072
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:37:52 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'root', '19961024@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:37:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201072.7408
+    'REQUEST_TIME' => 1603201072
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:39:06 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'root', '19961024@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:39:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201146.4635
+    'REQUEST_TIME' => 1603201146
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:39:06 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'root', '19961024@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:39:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201146.4635
+    'REQUEST_TIME' => 1603201146
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:42:13 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'panliu'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'panliu', '19961024@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'panliu'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:42:13 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201333.8191
+    'REQUEST_TIME' => 1603201333
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:42:13 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'panliu'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'panliu', '19961024@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'panliu'@'localhost' (using password: YES) in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:42:13 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201333.8191
+    'REQUEST_TIME' => 1603201333
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:47:40 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1044] Access denied for user 'panliu'@'localhost' to database 'photo-album' in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'panliu', '19960115@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'panliu'@'localhost' to database 'photo-album' in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:47:40 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201660.5663
+    'REQUEST_TIME' => 1603201660
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-10-20 13:47:40 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1044] Access denied for user 'panliu'@'localhost' to database 'photo-album' in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:705
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(705): PDO->__construct('mysql:host=loca...', 'panliu', '19960115@Qwer', NULL)
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(626): yii\db\Connection->createPdoInstance()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'panliu'@'localhost' to database 'photo-album' in /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php:637
+Stack trace:
+#0 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1025): yii\db\Connection->open()
+#1 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Connection.php(1012): yii\db\Connection->getMasterPdo()
+#2 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(255): yii\db\Connection->getSlavePdo()
+#3 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(1154): yii\db\Command->prepare(true)
+#4 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Command.php(401): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(319): yii\db\Command->queryAll()
+#6 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(757): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/db/Schema.php(193): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/MigrateController.php(211): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(877): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(169): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#15 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#16 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#17 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 /Users/panliu/Documents/project/photo-album/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /Users/panliu/Documents/project/photo-album/yii(25): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2020-10-20 13:47:40 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    '__INTELLIJ_COMMAND_HISTFILE__' => '/Users/panliu/Library/Application Support/JetBrains/PhpStorm2020.2/terminal/history/history-1'
+    'HOME' => '/Users/panliu'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x19:0x34'
+    'LOGIN_SHELL' => '1'
+    'PATH' => '/usr/local/opt/php/bin:/usr/local/opt/libpq/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/panliu/Documents/project/photo-album/node_modules/.bin'
+    'LC_CTYPE' => 'zh_CN.UTF-8'
+    'USER' => 'panliu'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.Qbn66rhwt0/Listeners'
+    'TMPDIR' => '/var/folders/0w/gfmfhwhd1r147g211zsmwsx80000gn/T/'
+    'SHELL' => '/bin/zsh'
+    'LOGNAME' => 'panliu'
+    'XPC_SERVICE_NAME' => '0'
+    'ZDOTDIR' => ''
+    'XPC_FLAGS' => '0x0'
+    'TERM' => 'xterm-256color'
+    'TERMINAL_EMULATOR' => 'JetBrains-JediTerm'
+    'SHLVL' => '1'
+    'PWD' => '/Users/panliu/Documents/project/photo-album'
+    'OLDPWD' => '/Users/panliu/Documents/project/photo-album'
+    'LDFLAGS' => '-L/usr/local/opt/openssl@1.1/lib'
+    'CPPFLAGS' => '-I/usr/local/opt/openssl@1.1/include'
+    '_' => '/Users/panliu/Documents/project/photo-album/./yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1603201660.5663
+    'REQUEST_TIME' => 1603201660
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

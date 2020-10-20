@@ -17,3 +17,5 @@
 # /frontend/config
 # /backend/config
 
+/console/runtime
+
