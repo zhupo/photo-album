@@ -96,6 +96,20 @@ class Module extends \yii\base\Module implements BootstrapInterface
                     'POST <action:[\w\-]+>' => '<action>',
                 ]
             ],
+            [
+                'class' => UrlRule::class,
+                'controller' => [
+                    "$uniqueId/comment",
+                ],
+                'extraPatterns' => [
+                    'DELETE {id}/<action:[\w\-]+>' => '<action>',
+
+                    'GET {id}/<action:[\w\-]+>' => '<action>',
+                    'PUT {id}/<action:[\w\-]+>' => '<action>',
+                    'PATCH {id}/<action:[\w\-]+>' => '<action>',
+                    'POST <action:[\w\-]+>' => '<action>',
+                ]
+            ],
         ]);
 //        echo json_encode($app->getUrlManager()->rules);die;
     }

@@ -3,7 +3,7 @@
 namespace common\domain\entity;
 
 /**
- * Class User
+ * Class News
  *
  * @property
  * @property string $url

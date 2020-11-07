@@ -27,6 +27,7 @@ class PhotoCategoryRepository extends BaseObject
      */
     public function find($id)
     {
+        /** @var PhotoCategory $photoCategory */
         $photoCategory = PhotoCategory::findOne(['id' => $id]);
         return $photoCategory;
     }
