@@ -12,16 +12,22 @@ use yii\base\BaseObject;
  */
 class CommentRepository extends BaseObject
 {
+    public const LIMIT_NUM = 10;
+
     /**
      * @param $entityId
+     * @param int $lastCreatedAt
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function findPhotoCommentByEntityId($entityId)
+    public function findPhotoCommentByEntityId($entityId, int $page = 0)
     {
         $qb = Comment::find()->select('comment.*')
-            ->andWhere(['entityType' => Comment::ENTITY_TYPE_PHOTO])
             ->where('entityId = :entityId', [':entityId' => $entityId])
-            ->orderBy('createdAt DESC');
+            ->andWhere(['entityType' => Comment::ENTITY_TYPE_PHOTO])
+            ->andWhere('id > :lastCreatedAt', [':lastCreatedAt' => ($page - 1) * self::LIMIT_NUM])
+            // ->andWhere('createdAt <= :lastCreatedAt', [':lastCreatedAt' => $lastCreatedAt])
+            ->limit(self::LIMIT_NUM);
+            // ->orderBy('createdAt DESC');
         return $qb->all();
     }
 }

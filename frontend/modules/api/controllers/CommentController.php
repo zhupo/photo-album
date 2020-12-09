@@ -3,6 +3,7 @@
 namespace frontend\modules\api\controllers;
 
 use common\domain\entity\Photo;
+use common\domain\entity\Comment;
 use common\domain\repository\CommentRepository;
 use frontend\modules\api\services\PhotoService;
 use Yii;
@@ -22,9 +23,20 @@ class CommentController extends BaseController
      * @param $categoryId
      * @return array|\yii\db\ActiveRecord[]
      */
-    public function actionIndex()
+    public function actionIndex($entityId, $page)
     {
         $request = Yii::$app->request;
-        return (new CommentRepository())->findPhotoCommentByEntityId($request->get('entityId'));
+        $comments = (new CommentRepository())->findPhotoCommentByEntityId($entityId, $page);
+        foreach ($comments as $key => $comment) {
+            $comments[$key]['createdAt'] = date('Y-m-d', $comment['createdAt']); 
+        }
+
+        return $comments;
+    }
+
+    public function actionCreate()
+    {
+        $comment = new Comment();
+        return $comment->createComment($this->request->post());
     }
 }
