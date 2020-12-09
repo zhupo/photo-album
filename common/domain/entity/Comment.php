@@ -19,12 +19,15 @@ class Comment extends Entity
         return 'comment';
     }
 
+    /**
+     * @param array $attributes
+     */
     public function createComment(array $attributes)
     {
         $comment = new static();
         $comment->content = $attributes['content'];
         $comment->entityType = self::ENTITY_TYPE_PHOTO;
-        $comment->entityId = 1;
+        $comment->entityId = $attributes['entityId'];
         $comment->createBy = 1;
         $comment->save();
     }
