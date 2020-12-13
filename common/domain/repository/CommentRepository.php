@@ -24,7 +24,7 @@ class CommentRepository extends BaseObject
         $qb = Comment::find()->select('comment.*')
             ->where('entityId = :entityId', [':entityId' => $entityId])
             ->andWhere(['entityType' => Comment::ENTITY_TYPE_PHOTO])
-            ->andWhere('id > :lastCreatedAt', [':lastCreatedAt' => ($page - 1) * self::LIMIT_NUM])
+            ->andWhere('id > :maxId', [':maxId' => ($page - 1) * self::LIMIT_NUM])
             // ->andWhere('createdAt <= :lastCreatedAt', [':lastCreatedAt' => $lastCreatedAt])
             ->limit(self::LIMIT_NUM);
             // ->orderBy('createdAt DESC');

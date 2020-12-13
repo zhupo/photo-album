@@ -32,7 +32,7 @@ class ImageController extends BaseController
                 [
                     'url' => 'http://m.qpic.cn/psc?/V50AYnUV3WqjyS2vXqPa0J2GSy2XfUEO/ruAMsa53pVQWN7FLK88i5n.Vlk09CSB.TRUmtvULrj0kgIPfWMA7zMV62NaG*VXWkwQpJrHrxn7uVX5b6m73t5pJlxNFvcX5zviFTnz5f7w!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5',
                     'title' => '商品展示',
-                    'router' => ['name' => 'news.list']
+                    'router' => ['name' => 'good.list', 'params' => ['page' => 1]]
                 ],
                 [
                     'url' => 'http://m.qpic.cn/psc?/V50AYnUV3WqjyS2vXqPa0J2GSy2XfUEO/ruAMsa53pVQWN7FLK88i5pmTwzj413gs83p6lzrD68p8NLbRYiEmh9qD6KiGMpedvSmA4H.WJhs78aXFtcQzj8rNgGAwjgVJomeGcRIPAPA!/mnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5',

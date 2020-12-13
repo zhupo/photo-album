@@ -30,5 +30,7 @@ class Comment extends Entity
         $comment->entityId = $attributes['entityId'];
         $comment->createBy = 1;
         $comment->save();
+
+        return $comment;
     }
 }

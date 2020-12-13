@@ -100,6 +100,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
                 'class' => UrlRule::class,
                 'controller' => [
                     "$uniqueId/comment",
+                    "$uniqueId/goods"
                 ],
                 'extraPatterns' => [
                     'DELETE {id}/<action:[\w\-]+>' => '<action>',
