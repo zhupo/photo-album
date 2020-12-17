@@ -5,7 +5,7 @@ return [
     'senderEmail' => 'noreply@example.com',
     'senderName' => 'Example.com mailer',
     'frontend' => [
-        'baseUrl' => 'http://photo-frontend:8081',
+        'baseUrl' => 'http://photo.com',
         'identityCookieName' => '_identity-frontend',
         'cookieValidationKey' => 'WXdUsZ8LBbEshsQwbPSy0aTZPzYWPGud',
         'sessionCookieName' => '_sessionid-frontend',
