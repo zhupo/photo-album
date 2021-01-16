@@ -2,10 +2,12 @@
 
 namespace frontend\modules\api\controllers;
 
-use common\domain\entity\Photo;
 use frontend\modules\api\services\PhotoService;
-use Yii;
 
+/**
+ * Class GoodsController
+ * @package frontend\modules\api\controllers
+ */
 class GoodsController extends BaseController
 {
     /** @var PhotoService */
@@ -18,8 +20,7 @@ class GoodsController extends BaseController
     }
 
     /**
-     * @param $categoryId
-     * @return array|\yii\db\ActiveRecord[]
+     * @return array[]
      */
     public function actionIndex()
     {
@@ -120,6 +121,20 @@ class GoodsController extends BaseController
                 'createdAt' => 1604735561,
                 'updatedAt' => 1604735561,
             ],
+        ];
+    }
+
+    public function actionView(int $id)
+    {
+        return [
+            'items' => [
+                [
+                    'url' => 'image/product/img.png'
+                ],
+                [
+                    'url' => 'image/product/img_1.png'
+                ],
+            ]
         ];
     }
 }
