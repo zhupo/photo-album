@@ -100,7 +100,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
                 'class' => UrlRule::class,
                 'controller' => [
                     "$uniqueId/comment",
-                    "$uniqueId/goods"
+                    "$uniqueId/good"
                 ],
                 'extraPatterns' => [
                     'DELETE {id}/<action:[\w\-]+>' => '<action>',
@@ -109,6 +109,29 @@ class Module extends \yii\base\Module implements BootstrapInterface
                     'PUT {id}/<action:[\w\-]+>' => '<action>',
                     'PATCH {id}/<action:[\w\-]+>' => '<action>',
                     'POST <action:[\w\-]+>' => '<action>',
+                ]
+            ],
+            [
+                'class' => UrlRule::class,
+                'controller' => [
+                    "$uniqueId/cart",
+                ],
+                'extraPatterns' => [
+                    'DELETE {id}/<action:[\w\-]+>' => '<action>',
+
+                    'GET {id}/<action:[\w\-]+>' => '<action>',
+                    'PUT {id}/<action:[\w\-]+>' => '<action>',
+                    'PATCH {id}/<action:[\w\-]+>' => '<action>',
+                    'POST <action:[\w\-]+>' => '<action>',
+                ]
+            ],
+            [
+                'class' => UrlRule::class,
+                'controller' => [
+                    "$uniqueId/good"
+                ],
+                'extraPatterns' => [
+                    'GET <action:[\w\-]+>' => '<action>',
                 ]
             ],
         ]);

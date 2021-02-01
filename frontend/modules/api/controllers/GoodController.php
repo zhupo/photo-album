@@ -5,10 +5,10 @@ namespace frontend\modules\api\controllers;
 use frontend\modules\api\services\PhotoService;
 
 /**
- * Class GoodsController
+ * Class GoodController
  * @package frontend\modules\api\controllers
  */
-class GoodsController extends BaseController
+class GoodController extends BaseController
 {
     /** @var PhotoService */
     private $service;
@@ -125,6 +125,20 @@ class GoodsController extends BaseController
     }
 
     public function actionView(int $id)
+    {
+        return [
+            'id' => $id,
+            'title' => '新科 S2300 无线麦克风 无线手持话筒 双手麦 KTV 舞台',
+            'number' => 'SD3985948554',
+            'stockQuantity' => '20',
+            'marketPrice' => '1998',
+            'sellPrice' => '998',
+            'createdAt' => '2021-01-18',
+            'updatedAt' => '2021-01-18',
+        ];
+    }
+
+    public function actionImages(int $id):array
     {
         return [
             'items' => [
